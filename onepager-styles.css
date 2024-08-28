@@ -1,0 +1,597 @@
+
+/* GENERAL SETTINGS!!! */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* Farbpalette für meine Seite voreinstellen*/
+:root{
+  --main-brand-color: #B5398E;
+  --primary-color: #191716;
+  --secondary-color: #162327;
+  --text-color: #F2F2F2;
+  --secondary-text-color: #BDB4BF;
+}
+
+/* Sternsymbol ist ein Universalselektor; Voreingestellte Margin und Padding auf 0*/
+
+
+
+body{
+  min-height: 100vh;
+  background-color: var(--primary-color);
+  font-family: 'Poppins', sans-serif;
+  /* font-size: 20; */
+  color: var(--text-color);
+}
+
+.navbar-brand{
+  transform: scale(2);
+  margin-bottom: 45px;
+  margin-left: 30px;
+}
+
+.nav-item{
+  color: var(--text-color);
+}
+
+.navbar-toggler{
+  background-color: rgb(229, 229, 229);
+  box-shadow: 0.5px 2px 8px 0.5px gainsboro;
+  border-radius: 30%;  
+  margin-right: 30px;
+}
+
+.img-bordered {
+    border: 6px solid var(--main-brand-color);
+    border-radius: 50%; /* Macht das Bild rund, wenn es quadratisch ist */
+    max-width: 100%; /* Sicherstellt, dass das Bild nicht größer als sein Container wird */
+    height: auto; /* Bewahrt das Seitenverhältnis des Bildes */
+    object-fit: cover; /* Schneidet das Bild ordentlich zu */
+    margin: auto; /* Zentriert das Bild innerhalb seines Containers */
+    box-shadow: 0 4px 8px rgba(65, 65, 65, 0.932);
+    backdrop-filter: blur(10px);
+}
+
+.img-bordered:hover {
+  transform: scale(1.2); /* Leichte Vergrößerung beim Hover */
+  box-shadow: 0 8px 32px rgb(107, 107, 107);
+}
+
+
+.meta-nav {
+  height: 30px;
+  width: auto;
+  
+}
+
+.navbar.navbar-expand-lg.bg-body-tertiary {
+  background-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.collapse.navbar-collapse {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 17px;
+}
+
+.collapse.navbar-collapse.show{
+  display: flex;
+  color: var(--primary-color);
+  
+  top: 71%; /* Positioniert das Menü unterhalb des Toggle-Icons */
+  left: 0; /* Setzt das Menü an den linken Rand des Containers */
+  right: 0; /* Dehnt das Menü über die gesamte Breite */
+  z-index: 1000; /* Stellt sicher, dass das Menü über anderen Inhalten liegt */
+  padding: 10px; 
+
+
+}
+
+.navbar-nav {
+ /* margin-right: 30px;
+  color: var(--text-color); */
+
+  background-color: var(--primary-color); /* Hintergrundfarbe für das Nav-Menü */
+  padding: 10px;
+  border-radius: 10px; /* Abrundung der Ecken */
+  max-width: fit-content; /* Begrenze die Breite auf den Inhalt */
+  padding: 20px;
+  
+}
+
+.navbar-nav .nav-link {
+  color: var(--text-color); /*Standardfarbe für Menü-Links*/
+  padding: 10px 15px;
+  text-decoration: none; 
+  
+  font-weight: bold;
+  transition: color 0.5s ease-in-out; 
+}
+
+.navbar-nav-collapse.show .nav-links{
+  color: var(--main-brand-color);
+}
+
+.navbar-nav .nav-link:hover {
+  /* color: rgb(168, 18, 168); /* Farbe beim Hover */
+  color: var(--main-brand-color);
+  transition: 0.2s;
+}
+
+.form-control {
+  font-weight: 400;
+  color:var(--primary-color);
+}
+
+
+.skillset-section {
+  width: auto;
+  min-height: 600px;
+}
+
+.img-fluid {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+/*AUSRICHTUNG UND FORMATIERUNG DER SKILLSET BILDER*/
+#Webdesign-Bild {
+  position: relative;
+  top: 40px;
+}
+
+#Profilbild {
+  transform: scale(0.75);
+}
+
+#Software-Bild {
+  position: relative;
+  top: 40px;
+}
+
+#Graphicdesign-Bild {
+  position: relative;
+  bottom: 100px;
+  right: 70px;
+}
+
+#Programmiersprachen-Bild {
+  position: relative;
+  bottom: 100px;
+  left: 70px;
+}
+
+.img-bordered {
+  border: 7px solid var(--main-brand-color);
+  border-radius: 50%; /* Macht das Bild rund, wenn es quadratisch ist */
+  max-width: 100%; /* Sicherstellt, dass das Bild nicht größer als sein Container wird */
+  height: auto; /* Bewahrt das Seitenverhältnis des Bildes */
+  object-fit: cover; /* Schneidet das Bild ordentlich zu */
+  margin: auto; /* Zentriert das Bild innerhalb seines Containers */
+  box-shadow: 0 4px 8px rgba(65, 65, 65, 0.932);
+  backdrop-filter: blur(10px);
+}
+
+
+/*RESPONSIVE VERHALTEN BEI GROSSEM U KLEINEN BILDSCHIRM*/
+@media (max-width: 1150px) {
+  #Webdesign-Bild {
+    position: relative;
+    top: 70px;
+    left: 20px;
+  }
+  
+  #Software-Bild {
+    position: relative;
+    top: 70px;
+    right: 20px;
+  }
+
+  #Graphicdesign-Bild {
+    position: relative;
+    bottom: 50px;
+    right: 40px;
+  }
+  
+  #Programmiersprachen-Bild {
+    position: relative;
+    bottom: 50px;
+    left: 40px;
+  }
+}
+
+@media (max-width: 850px) {
+  #Webdesign-Bild {
+    position: relative;
+    top: 70px;
+    left: 20px;
+  }
+  
+  #Software-Bild {
+    position: relative;
+    top: 70px;
+    right: 20px;
+  }
+
+  #Graphicdesign-Bild {
+    position: relative;
+    bottom: 50px;
+    right: 3px;
+  }
+  
+  #Programmiersprachen-Bild {
+    position: relative;
+    bottom: 50px;
+    left: 3px;
+  }
+
+  #Anwendungen-Bild {
+    position: relative;
+    bottom: 15px;
+  }
+}
+
+@media (max-width: 620px) {
+  #Webdesign-Bild {
+    position: relative;
+    top: 70px;
+    left: 20px;
+  }
+  
+  #Software-Bild {
+    position: relative;
+    top: 70px;
+    right: 20px;
+  }
+
+  #Graphicdesign-Bild {
+    position: relative;
+    bottom: 30px;
+    right: 3px;
+  }
+  
+  #Programmiersprachen-Bild {
+    position: relative;
+    bottom: 30px;
+    left: 3px;
+  }
+
+  #Anwendungen-Bild {
+    position: relative;
+    bottom: 5px;
+  }
+
+  .img-bordered {
+    border: 5px solid var(--main-brand-color);
+  }
+}
+
+@media (max-width: 515px) {
+  #Webdesign-Bild {
+    position: relative;
+    top: 50px;
+    left: 20px;
+  }
+  
+  #Software-Bild {
+    position: relative;
+    top: 50px;
+    right: 20px;
+  }
+
+  #Graphicdesign-Bild {
+    position: relative;
+    bottom: 30px;
+    right: 1px;
+  }
+  
+  #Programmiersprachen-Bild {
+    position: relative;
+    bottom: 30px;
+    left: 1px;
+  }
+
+  #Anwendungen-Bild {
+    position: relative;
+    bottom: 5px;
+  }
+
+  .img-bordered {
+    border: 4px solid var(--main-brand-color);
+  }
+
+}
+
+.img-bordered:hover {
+  transform: scale(1.09); /* Leichte Vergrößerung beim Hover */
+  box-shadow: 0 8px 32px rgb(107, 107, 107);
+}
+
+
+
+
+#willkommenstext {
+  font-size: 25;
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 25px;
+  color: var(--text-color);
+  
+}
+
+@media (max-width: 653px) {
+  #skillset.skillset-section{
+    margin-bottom: -40px;
+  }
+}
+
+@media (max-width: 573px) {
+  #willkommenstext {
+    font-size: 5vw;
+  }
+  #skillset.skillset-section{
+    margin-bottom: -160px;
+  }
+  #about-me h3 {
+    font-size: 4vw;
+  }
+  #about-me p{
+    font-size: 3vw;
+  }
+  .card {
+    max-width: 80%;
+  }
+}
+
+
+.about-me-section {
+  width: auto;
+  min-height: 600px;
+  padding-top: 40px;
+  margin-bottom: 60px;
+  place-items: center;
+}
+
+
+.flex_container{
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 350px;
+  max-width: 80%;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  border-radius: 26px;
+  padding: 60px 20px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  
+
+}
+
+.card *{
+  text-align: center;
+}
+
+h3 {
+  font-size: 26px;
+}
+
+.card a{
+  background-color: var(--main-brand-color);
+  width: min-content;
+  padding: 8px 25px;
+  border-radius: 7px;
+  margin: 0 auto;
+  text-decoration: none;
+  color: var(--text-color);
+  border: 2px solid var(--main-brand-color);
+}
+
+.card a:hover{
+  background-color: transparent;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* CONTACT STYLES */
+
+
+#contact {
+  padding: 5px 0;
+}
+
+.contact-section h2 {
+  font-size: 35px;
+  text-align: center;
+  font-family: Poppins, sans-serif;
+  font-weight: bold;
+  justify-content: center;
+  margin-top: 25px;
+  color: var(--text-color);
+}
+
+.grid-container {
+  /*border: 3px solid var(--main-brand-color);
+  border-color: var(--main-brand-color);*/
+  margin: 60px auto;
+  background-color: var(--main-brand-color);
+  width: 1500px;
+  max-width: 90%; /*Automatisches Schrumpfen*/
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 250px 250px;
+  gap: 15px;
+  grid-template-areas:
+  "item1 item1 item2 item5"
+  "item4 item3 item3 item5";
+}
+
+.grid.item {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  gap: 40px;
+}
+
+#contact-insta{
+  grid-area: item1;
+}
+
+#contact-twitter{
+  grid-area: item2;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+} 
+
+#contact-linkedin{
+  grid-area: item3;
+}
+
+#contact-whatsapp{
+  grid-area: item4;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+#contact-formular {
+  grid-area: item5;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 35px;
+}
+
+.grid.item img{
+  height: 170px;
+  width: 170px;
+}
+
+p {
+  font-family: Poppins, sans-serif;
+  font-weight:300;
+  justify-content: center;
+}
+
+
+@media(max-width: 1225px){
+  .contact-section h2 {
+    margin-top: 10px;
+  }
+
+  .grid-container{
+    margin-top: calc(60px - 30px);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 250px 250px 250px;
+    grid-template-areas:
+    "item1 item1 item2"
+    "item4 item3 item3"
+    "item5 item5 item5";
+  }
+}
+
+@media(max-width: 986px){
+  .contact-section h2 {
+    margin-top: 65px;
+  }
+
+  .grid-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+    "item1 item1"
+    "item3 item3"
+    "item4 item2"
+    "item5 item5";
+  }
+}
+
+@media(max-width: 570px){
+  .grid-container{
+    margin-top: calc(60px - 35px);
+  }
+
+  #contact h2{
+    font-size: 5vw;
+    margin-top: 20px;
+  }
+  .grid.item{
+    padding: 20px;
+  }
+  .grid.item img{
+    height: 70px;
+    width: 70px;
+  }
+  .grid.item h3{
+    font-size: 21px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.vacom-section {
+  height: 800px;
+  width: auto;
+  background-color: blueviolet;
+}
+
+.kontakt-section {
+  height: 600px;
+  width: auto;
+  background-color: brown;
+}
+
+.doormate-section {
+  height: 300px;
+  width: auto;
+  background-color: mediumpurple;
+}
+
+.footer-section {
+  height: 200px;
+  width: auto;
+  background-color: lightcoral;
+}
+*/
+
+
+
